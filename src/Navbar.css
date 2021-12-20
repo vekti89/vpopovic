@@ -1,0 +1,251 @@
+.Navbar {
+    width:25%;
+    height:100vh;
+    position:fixed;
+    text-transform: uppercase;
+    background-color: var(--nav-under-dark);
+}
+
+.Navbar-image {
+    width:100%;
+    height:100%;
+    position: relative;
+    opacity: 0.12;
+    filter:grayscale(100%);
+}
+
+
+.Navbar-content {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    display:flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+}
+.Navbar-content hr {
+    display: none;
+}
+.Navbar-theme {
+    margin:1rem 1rem 0 0;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.Navbar-theme p {
+   font-size: 0.8rem;
+   font-weight: bold;
+   margin-bottom: 0.3rem;
+}
+.Navbar-theme span {
+   color: var(--my-color); 
+   font-size: 0.81.5rem;
+}
+.Navbar-profile {
+    margin:2.5rem 0;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 1.3px;
+}
+.Navbar-profile h3 {
+    margin:1.2rem 0 0.5rem;
+}
+.Navbar-profile span {
+    color: var(--my-color);
+}
+.Navbar-profileImg {
+    height: 170px;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+}
+
+
+.Navbar-nav {
+    width: 70%;
+    text-align: left;
+    display:flex; 
+    flex-direction: column;
+}
+.Navbar-navigation {
+    font-size:0.9rem;
+    display:flex; 
+    flex-direction: column;
+}
+.Navbar-navigation a {
+    color:inherit;
+    text-decoration: none;
+    opacity: 0.85;
+    font-size:0.9rem;
+    line-height: 2rem;
+    font-weight: bolder;
+    letter-spacing: 1.3px;
+    transition:all 100ms ease-in-out;
+}
+
+.Navbar-navigation a:hover {
+    opacity: 1;
+}
+
+.Navbar-navigation span {
+    display:none;
+}
+
+.Navbar-navigation a.active {
+    color: var(--my-color);
+    font-size: 0.95rem;
+    opacity: 1;
+} 
+.Navbar-navigation a.active span {
+    display:inline-block;
+    color: var(--my-color);
+}
+
+
+
+
+.Navbar-contact {
+    margin-top:3rem;
+    line-height: 2rem;
+    
+}
+.Navbar-contact p {
+    font-size: 0.75rem; 
+    letter-spacing: 0.2px;
+}
+.Navbar-contact span {
+    font-size: 1.45rem;
+}
+.Navbar-contact span a {
+    color:white;
+    text-decoration: none;
+}
+.Navbar-contact button {
+    margin-top:2.5rem;
+    font-size: 0.9rem;
+    display: block;
+    padding:4px 15px;
+    background-color: var(--nav-bg-dark);
+    border: 1px solid var(--my-color);
+    color:white;
+    box-shadow: -7px 10px 15px rgba(1, 245, 187, 0.25);
+}
+
+.Navbar-contact button:hover, .Navbar-contact button:active {
+    cursor: pointer;
+    border: 1px solid var(--my-color);
+    border-radius: 0.3em;
+    transform:none;
+    background-color: var(--nav-bg-dark);
+    box-shadow: -7px 10px 15px rgba(1, 245, 187, 0.25);
+    transition: none;
+}
+.Navbar-contact button:hover .pdfIcon, .Navbar-contact button:active .pdfIcon {
+    color:var(--my-color)
+}
+.Navbar-contact .pdfIcon {
+    font-size:1.2rem; 
+    margin-left:0.2rem;
+}
+.Navbar-icon {
+    margin:0.5rem 0.25rem;
+    transition: all 300ms ease-in-out;
+}
+
+.Navbar-icon:hover {
+    transform: scale(1.3); 
+    color:var(--my-color);
+}
+
+
+
+@media (max-width: 1400px) {
+    .Navbar {
+        width:30%;
+    }
+  }
+
+
+@media (max-width: 992px) {
+    .Navbar {
+        width:100%;
+        height:26rem;
+        position:static;
+    }
+    .Navbar-profile {
+        margin:2rem 0;
+        font-weight: bolder;
+        text-align: center;
+        letter-spacing: 1.3px;
+    }
+
+    .Navbar-image {
+        display: none;
+    }
+    .Navbar-content {
+        justify-content: space-between;
+        background-color: #273144;
+        position: relative;
+    }
+    .Navbar-content hr {
+        width:99%;
+        display: block;
+        border-top-width: 0;
+        margin-bottom: 0.1rem;
+ 
+    }
+    .Navbar-nav {
+        width:100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .Navbar-navigation {
+        flex-direction: row;
+        
+    }
+    .Navbar-navigation a {
+        color:white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: bolder;
+        letter-spacing: 0.9px;
+        margin: 0.2rem 0.5rem 0.3rem 0.5rem;
+    }
+   
+    .Navbar-navigation a.active {
+        color: var(--my-color);
+        font-size: 0.9rem;
+        opacity: 1;
+        letter-spacing: 0.9px;
+    } 
+    
+    .Navbar-navigation a.active span {
+        display: none;
+    }
+    .Navbar-contact { 
+        margin-top:0;
+    }
+    .Navbar-contact p {
+        display: none; 
+    }
+    
+    .Navbar-contact span{ 
+        font-size: 1.25rem;
+        margin-right: 0.6rem;
+    }
+
+
+    .Navbar-contact button {
+        margin-top:0rem;
+        margin-left:0.2rem;
+        font-size: 0.9rem;
+        display: inline;
+        position:relative;
+        top:-0.6rem;
+        
+    }
+
+  }
+

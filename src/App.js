@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from "./Navbar";
+import Home from "./Home"
+import ProjectDetails from './ProjectDetails';
+import CV from "./CV";
+import NotFound from "./NotFound";
+import { ThemeProvider } from './contexts/ThemeContext';
+
+import ScrollToTop from './components/ScrollToTop';
+
+import {Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <ThemeProvider>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<><Navbar/><Home/> </>} />
+        <Route path="/projects" element={<><Navbar/><ProjectDetails/></>} />
+        <Route path="/cv" element={<CV/>} />
+        <Route path="*" element={<NotFound/>} />
+      </Routes>
+      </ThemeProvider>
+    </main>
   );
 }
 
