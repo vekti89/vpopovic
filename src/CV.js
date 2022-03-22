@@ -82,7 +82,7 @@ export default function CV () {
                     <h3 className="CV-heading">Languages</h3>
                     
                     <ul className="CV-line">
-                        <li>German (<span>B1</span> certificate, learning in progress)</li>
+                        <li>German (B1/B2)</li>
                         <li>fluent English and French</li>
                         <li>native Serbian</li>
                     </ul>

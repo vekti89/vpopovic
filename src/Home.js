@@ -41,7 +41,7 @@ function Home() {
         </div>
         <div className="skills">
           <h4>Languages</h4>
-          <p> <span>-</span> German (B1)</p>
+          <p> <span>-</span> German B1/B2</p>
           <p> <span>-</span> Fluent English</p>
           <p> <span>-</span> Fluent French</p>
           <p> <span>-</span> Native Serbian</p>
